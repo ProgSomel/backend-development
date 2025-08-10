@@ -141,7 +141,7 @@ func init(){
 
 **---------------------------------------------------------------------------------------------------------**
 
-**making object propery name in lowercase or in camel case**
+**making object property name in lowercase or in camel case**
 ```go
 type Product struct{
 	ID int `json:"id"`
