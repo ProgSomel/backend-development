@@ -2,17 +2,24 @@ package main
 
 import "fmt"
 
+type Shape struct {
+
+	Rectangle
+}
+
 type Rectangle struct {
 	length float64
 	width float64
 }
 
+//? Method with value receiver
 func(r Rectangle) Area() float64 {
 	return r.length * r.width
 }
 
 func main(){
-	rect := Rectangle{length: 10, width: 0}
-	area := rect.Area()
-	fmt.Println("Area of Rectangle with width 9 and length 10 is: ", area)
+	
+	s := Shape{Rectangle: Rectangle{length: 10, width: 9}}
+	fmt.Println(s.Area())
+
 }
